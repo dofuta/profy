@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root "top#index"
   devise_for :users
-  get 'top/index'
+  resources :users, only: [:show]
 
 end
