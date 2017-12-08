@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   #association
   belongs_to :group
+  has_many :questions
 
   #validation
   before_validation :group_key_to_id, if: :has_group_key?
