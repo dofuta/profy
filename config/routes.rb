@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'groups/show'
 
-  root "top#index"
   devise_for :users
   resources :users, only: [:show, :edit, :update]
+  root "top#index"
   resources :groups, only: [:show, :edit, :update]
   resources :questions, only: [:create]
+  resources :answers, only: [:new, :create]
 end
