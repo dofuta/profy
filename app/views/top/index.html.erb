@@ -12,7 +12,7 @@
         <%= current_user.name %>
       </div>
     </header>
-    <%= form_for(@question) do |f| %>
+    <%= form_for @question, url: question_index_path do |f| %>
       <%= f.text_field :text, placeholder: "例：好きな食べ物は？" %>
       <%= f.submit "質問する" %>
     <% end %>
